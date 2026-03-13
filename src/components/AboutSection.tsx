@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, Sparkles, Palette, Heart } from "lucide-react";
-import galleryBridal from "@/assets/gallery-bridal.jpg";
+import galleryBridal from "../../src/assets/gallery-bridal.jpg";
 
 const highlights = [
   { icon: Shield, label: "Hygienic Tools & Clean Environment" },
@@ -55,15 +55,15 @@ const AboutSection = () => {
             <div className="mt-8 flex gap-6">
               <div className="text-center">
                 <p className="text-2xl font-display font-bold text-gold">500+</p>
-                <p className="text-xs font-body text-muted-foreground tracking-wider uppercase">Happy Clients</p>
+                <p className="text-xs font-body text-muted-foreground tracking-wider font-semibold uppercase">Happy Clients</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-display font-bold text-gold">5.0</p>
-                <p className="text-xs font-body text-muted-foreground tracking-wider uppercase">Google Rating</p>
+                <p className="text-xs font-body text-muted-foreground tracking-wider font-semibold uppercase">Google Rating</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-display font-bold text-gold">3+</p>
-                <p className="text-xs font-body text-muted-foreground tracking-wider uppercase">Years Experience</p>
+                <p className="text-2xl font-display font-bold text-gold">5+</p>
+                <p className="text-xs font-body text-muted-foreground tracking-wider font-semibold uppercase">Years Experience</p>
               </div>
             </div>
           </motion.div>
@@ -75,9 +75,9 @@ const AboutSection = () => {
             className="relative"
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src={galleryBridal} alt="Bridal nail art by Stella Nail Studio" className="w-full h-[500px] object-cover" />
+              <img src={galleryBridal} alt="Bridal nail art by Stella Nail Studio" className="w-full h-[500px] object-cover hover:scale-110 duration-300" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-lg border border-border hidden md:block">
+            <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-lg border border-border ml-2 md:ml-0">
               <p className="text-sm font-body font-semibold text-foreground">Women-Owned Business</p>
               <p className="text-xs font-body text-muted-foreground">LGBTQ+ Friendly • Professional Artists</p>
             </div>

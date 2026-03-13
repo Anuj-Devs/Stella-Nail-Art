@@ -33,10 +33,10 @@ const ContactSection = () => {
               <div>
                 <h3 className="font-display font-bold text-foreground mb-1">Address</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed">
-                  Shop 3, Vardhman Heights<br />
-                  New 150 Feet Road<br />
-                  Opp. SRP Camp Bapa Sitaram Chowk<br />
-                  Rajkot, Gujarat 360005
+                  Shop 3, Vardhman Heights,<br />
+                  New 150 Feet Road,<br />
+                  Opp. SRP Camp Bapa Sitaram Chowk,<br />
+                  Rajkot, Gujarat - 360005
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@ const ContactSection = () => {
                 <Phone className="w-4 h-4" /> Call Now
               </a>
               <a
-                href="https://www.google.com/maps/search/8PJM+7Q+Rajkot+Gujarat"
+                href="https://www.google.com/maps/search/STELLA NAIL STUDIO+Rajkot+Gujarat"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-3 border-2 border-gold text-gold font-body font-semibold text-sm tracking-wider uppercase rounded-full text-center hover:bg-gold hover:text-accent-foreground transition-all flex items-center justify-center gap-2"
@@ -86,7 +86,7 @@ const ContactSection = () => {
             className="rounded-2xl overflow-hidden shadow-lg border border-border h-[400px] lg:h-full min-h-[350px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5!2d70.77!3d22.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z8PJM+7Q+Rajkot+Gujarat!5e0!3m2!1sen!2sin!4v1600000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2738.3385393583217!2d70.73175772799205!3d22.33085853501822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9c5944a1a13%3A0x9c9fed48c48df596!2sSTELLA%20NAIL%20STUDIO!5e0!3m2!1sen!2sin!4v1773386120413!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
