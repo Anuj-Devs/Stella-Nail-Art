@@ -49,6 +49,7 @@ const ContactSection = () => {
                 <h3 className="font-display font-bold text-foreground mb-1">Phone</h3>
                 <a href="tel:08849151381" className="text-sm font-body text-gold hover:underline">088491 51381</a>
               </div>
+              {/*  */}
             </div>
 
             <div className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border">
