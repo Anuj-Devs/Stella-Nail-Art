@@ -205,7 +205,7 @@ const BookingSection = () => {
               <label className="block text-xs font-semibold uppercase mb-2">
                 Service *
               </label>
-              <select
+              <select aria-label="Choose a service"
                 name="service"
                 className={inputClasses(errors.service)}
                 onChange={() => setErrors({ ...errors, service: "" })}
@@ -225,7 +225,7 @@ const BookingSection = () => {
                 <label className="block text-xs font-semibold uppercase mb-2">
                   Preferred Date *
                 </label>
-                <input
+                <input aria-label="Select a date"
                   name="date"
                   type="date"
                   min={today}
@@ -243,7 +243,7 @@ const BookingSection = () => {
                 <label className="block text-xs font-semibold uppercase mb-2">
                   Preferred Time *
                 </label>
-                <input
+                <input aria-label="Select a time"
                   name="time"
                   type="time"
                   value={defaultTime}

@@ -32,10 +32,10 @@ const Footer = () => {
               <span className="text-xs font-body text-gold">5.0 (32 Reviews)</span>
             </div>
             <div className="flex gap-3">
-              <a href="https://www.instagram.com/stella_nail.studio/" target="_blank" className="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-accent-foreground transition-all">
+              <a href="https://www.instagram.com/stella_nail.studio/" target="_blank" aria-label="Instagram" className="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-accent-foreground transition-all">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://www.facebook.com/stellanailstudio" target="_blank" className="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-accent-foreground transition-all">
+              <a href="https://www.facebook.com/stellanailstudio" target="_blank" aria-label="Facebook" className="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-accent-foreground transition-all">
                 <Facebook className="w-4 h-4" />
               </a>
             </div>
