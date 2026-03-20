@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Star, Quote } from "lucide-react";
 
 const reviews = [
@@ -21,6 +21,18 @@ const reviews = [
 ];
 
 const ReviewsSection = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://featurable.com/assets/bundle.js";
+    script.defer = true;
+    script.charset = "UTF-8";
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -35,7 +47,7 @@ const ReviewsSection = () => {
         >
           <p className="text-sm font-body font-semibold tracking-[0.2em] uppercase text-gold mb-3">Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">What Our Clients Say</h2>
-          <div className="flex items-center justify-center gap-2">
+          {/* <div className="flex items-center justify-center gap-2">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-gold text-gold" />
@@ -43,10 +55,10 @@ const ReviewsSection = () => {
             </div>
             <span className="font-body font-semibold text-foreground">5.0</span>
             <span className="font-body text-muted-foreground text-sm">(32 Reviews on Google)</span>
-          </div>
+          </div> */}
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        {/* <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {reviews.map((review, i) => (
             <motion.div
               key={review.name}
@@ -65,7 +77,13 @@ const ReviewsSection = () => {
               <p className="font-body font-semibold text-foreground text-sm">— {review.name}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
+        <section  className="-mt-12" id="reviews" ref={ref}>
+          <div
+            id="featurable-fdd0ea82-2212-41af-a6ff-dcb25eb9aa74"
+            data-featurable-async
+          ></div>
+        </section>
       </div>
     </section>
   );
