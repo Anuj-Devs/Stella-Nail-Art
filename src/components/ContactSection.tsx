@@ -1,18 +1,26 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [enableMotion, setEnableMotion] = useState(false);
+
+  useEffect(() => {
+    const update = () => setEnableMotion(window.innerWidth >= 768);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
     <section id="contact" className="py-20 md:py-28 bg-nude-light" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={enableMotion ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          animate={enableMotion && isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+          transition={{ duration: enableMotion ? 0.6 : 0 }}
           className="text-center mb-14"
         >
           <p className="text-sm font-body font-semibold tracking-[0.2em] uppercase text-gold mb-3">Get in Touch</p>
@@ -21,13 +29,13 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial={enableMotion ? { opacity: 0, x: -30 } : { opacity: 1, x: 0 }}
+            animate={enableMotion && isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+            transition={{ duration: enableMotion ? 0.6 : 0, delay: enableMotion ? 0.1 : 0 }}
             className="space-y-6"
           >
             <div className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border">
-              <div className="w-12 h-12 rounded-full bg-blush-light flex items-center justify-center flex-shrink-0">
+              <div onClick={() => window.open('https://www.google.com/maps/search/STELLA NAIL STUDIO+Rajkot+Gujarat', '_blank')} className="w-12 h-12 rounded-full bg-blush-light flex items-center justify-center flex-shrink-0 cursor-pointer hover:bg-blush transition-colors">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
@@ -42,12 +50,12 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border">
-              <div className="w-12 h-12 rounded-full bg-blush-light flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-full bg-blush-light flex items-center justify-center flex-shrink-0 hover:bg-blush transition-colors cursor-pointer" onClick={() => window.open('tel:08849151381', '_blank')}>
                 <Phone className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-foreground mb-1">Phone</h3>
-                <a href="tel:08849151381" className="text-sm font-body text-gold hover:underline">088491 51381</a>
+                <a href="tel:08849151381" className="text-sm font-body text-gold hover:underline">88491 51381</a>
               </div>
               {/*  */}
             </div>
@@ -81,9 +89,9 @@ const ContactSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={enableMotion ? { opacity: 0, x: 30 } : { opacity: 1, x: 0 }}
+            animate={enableMotion && isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+            transition={{ duration: enableMotion ? 0.6 : 0, delay: enableMotion ? 0.2 : 0 }}
             className="rounded-2xl overflow-hidden shadow-lg border border-border h-[400px] lg:h-full min-h-[350px]"
           >
             <iframe

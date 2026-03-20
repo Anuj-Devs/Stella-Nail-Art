@@ -15,10 +15,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/70 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="font-display text-xl md:text-2xl font-bold text-foreground tracking-wide">
-          STELLA <span className="text-gold">NAIL STUDIO</span>
+        <a href="#home" className="flex items-center gap-3 font-display font-bold tracking-wide text-foreground">
+          <img src="/edited_logo_yellow.png" alt="Stella Nail Studio" className="h-auto w-24 rounded-full object-cover" />
+          {/* <div>
+            <div className="text-lg md:text-2xl">STELLA</div>
+            <div className="text-xs md:text-sm uppercase text-gold">NAIL STUDIO</div>
+          </div> */}
         </a>
 
         {/* Desktop nav */}
@@ -45,7 +49,7 @@ const Navbar = () => {
           <a href="tel:08849151381" className="p-2 text-gold">
             <Phone className="w-5 h-5" />
           </a>
-          <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-foreground">
+          <button onClick={() => setIsOpen(!isOpen)} className="p-2  text-gold">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -55,30 +59,40 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-card border-b border-border overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 lg:hidden bg-black/40"
+            onClick={() => setIsOpen(false)}
           >
-            <div className="px-4 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-16 left-0 right-0 bg-card border-b border-border overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="px-4 py-6 flex flex-col gap-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm font-body font-medium tracking-wider uppercase text-muted-foreground hover:text-gold transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 <a
-                  key={link.href}
-                  href={link.href}
+                  href="#booking"
                   onClick={() => setIsOpen(false)}
-                  className="text-sm font-body font-medium tracking-wider uppercase text-muted-foreground hover:text-gold transition-colors"
+                  className="mt-2 px-6 py-3 bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase rounded-full text-center"
                 >
-                  {link.label}
+                  Book Appointment
                 </a>
-              ))}
-              <a
-                href="#booking"
-                onClick={() => setIsOpen(false)}
-                className="mt-2 px-6 py-3 bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase rounded-full text-center"
-              >
-                Book Appointment
-              </a>
-            </div>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

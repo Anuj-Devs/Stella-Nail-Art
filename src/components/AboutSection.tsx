@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Shield, Sparkles, Palette, Heart } from "lucide-react";
 import galleryBridal from "../../src/assets/gallery-bridal.jpg";
 
@@ -14,15 +14,23 @@ const highlights = [
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [enableMotion, setEnableMotion] = useState(false);
+
+  useEffect(() => {
+    const update = () => setEnableMotion(window.innerWidth >= 768);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
     <section id="about" className="py-20 md:py-28 bg-nude-light" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
+            initial={enableMotion ? { opacity: 0, x: -40 } : { opacity: 1, x: 0 }}
+            animate={enableMotion && isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+            transition={{ duration: enableMotion ? 0.7 : 0 }}
           >
             <p className="text-sm font-body font-semibold tracking-[0.2em] uppercase text-gold mb-3">About Us</p>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6 leading-tight">
@@ -39,9 +47,9 @@ const AboutSection = () => {
               {highlights.map((item, i) => (
                 <motion.div
                   key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                  initial={enableMotion ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+                  animate={enableMotion && isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+                  transition={{ duration: enableMotion ? 0.5 : 0, delay: enableMotion ? 0.2 + i * 0.1 : 0 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-card"
                 >
                   <div className="w-10 h-10 rounded-full bg-blush-light flex items-center justify-center flex-shrink-0">
@@ -69,9 +77,9 @@ const AboutSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={enableMotion ? { opacity: 0, x: 40 } : { opacity: 1, x: 0 }}
+            animate={enableMotion && isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+            transition={{ duration: enableMotion ? 0.7 : 0, delay: enableMotion ? 0.2 : 0 }}
             className="relative"
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl">
