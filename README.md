@@ -134,7 +134,7 @@ Want to run the project locally? Follow these steps.
 
 1. Clone the repository
 bash
-git clone [YOUR_GITHUB_REPOSITORY_URL](https://github.com/Anuj-Devs/Stella-Nail-Art.git)
+git clone https://github.com/Anuj-Devs/Stella-Nail-Art.git
 
 2. Navigate to the project directory
 bash
