@@ -1,73 +1,189 @@
-# Welcome to your Lovable project
+💅 Stella Nail Studio — Luxury Nail Art & Extensions
 
-## Project info
+<p align="center">
+<img src="https://img.shields.io/badge/✨_STELLA-NAIL_STUDIO-ec4899?style=for-the-badge&labelColor=1f1025" alt="Stella Nail Studio" />
+<img src="https://img.shields.io/badge/Website-Live-22c55e?style=for-the-badge" alt="Live Website" />
+</p>
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+<h1 align="center">🌸 Stella Nail Studio</h1>
 
-## How can I edit this code?
+<h3 align="center">Where Luxury Meets Nail Art ✨</h3>
 
-There are several ways of editing your application.
+<p align="center">
+A premium nail art studio website showcasing luxury nail extensions,
+creative nail designs, and professional nail care services in Rajkot, Gujarat.
+</p>
 
-**Use Lovable**
+<p align="center">
+<a href="https://stella-nail-studio.vercel.app/">
+<img src="https://img.shields.io/badge/🌐_VISIT_WEBSITE-ec4899?style=for-the-badge" alt="Visit Website" />
+</a>
+</p>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+💖 About The Project
 
-Changes made via Lovable will be committed automatically to this repo.
+Stella Nail Studio is a stylish and modern website designed for a premium nail art studio in Rajkot, Gujarat.
 
-**Use your preferred IDE**
+The website delivers an elegant digital experience with a luxury-inspired aesthetic, beautiful nail art galleries, detailed service listings, client testimonials, and an easy appointment booking interface.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+From stunning bridal nail art to trendy nail extensions, the website highlights the studio's creativity, professionalism, and commitment to customer satisfaction.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✨ Designed to make every visit feel luxurious!
 
-Follow these steps:
+🌐 Live Demo
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🔗 Website: https://stella-nail-studio.vercel.app/
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+📍 Location: Rajkot, Gujarat, India
 
-# Step 3: Install the necessary dependencies.
-npm i
+💅 Speciality: Luxury Nail Art, Nail Extensions & Professional Nail Care
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+✨ Features
+Feature	Description
+🌸 Luxury UI	Elegant, beauty-focused website design
+📱 Responsive Design	Designed for mobile, tablet, and desktop screens
+💅 Premium Services	Comprehensive nail art and nail care listings
+🖼️ Nail Art Gallery	Showcase of creative nail designs
+⭐ Client Testimonials	Customer feedback and reviews
+📅 Appointment Booking	Form for appointment requests
+📞 Quick Contact	Easy access to phone and contact details
+📍 Studio Location	Address and directions information
+🧼 Hygiene Highlights	Focus on cleanliness and professional care
+🚀 Live Deployment	Website hosted on Vercel
+💅 Our Premium Services
+💎 Nail Extensions
+Acrylic Nail Extensions
+Gel Nail Extensions
+PolyGel Nail Extensions
+Soft Gel Extensions
+Nail Extension Refills
+🎨 Creative Nail Art
+Simple Nail Art
+Hand-Painted Nail Art
+3D Nail Art
+Stone & Rhinestone Nail Art
+Glitter Nail Art
+Chrome & Mirror Nails
+Ombre Nails
+Marble Nail Art
+Bridal Nail Art
+Festival Special Nail Art
+💖 Nail Polish Services
+Gel Polish Application
+Gel Polish Removal
+French Tips
+Cat Eye Nails
+🌷 Professional Nail Care
+Classic Manicure
+Gel Manicure
+Spa Manicure
+Nail Strengthening Treatment
+Cuticle Care
+🌟 Why Stella Nail Studio?
+
+✨ Experienced Nail Artists
+
+💎 Premium Quality Nail Products
+
+🧼 Clean & Hygienic Environment
+
+🎨 Trendy and Creative Nail Designs
+
+💖 Personalized Client Experience
+
+🌈 Women-Owned & LGBTQ+ Friendly Business
+
+🛠️ Tech Stack
+
+The website is deployed on Vercel. Update this section to match the technologies used in your actual source code.
+
+Frontend: HTML, CSS, JS, Tailwind, React.js
+Styling: Add your CSS framework or styling approach
+Deployment: Vercel
+Version Control: Git & GitHub
+📸 Website Preview
+
+<p align="center">
+<a href="https://stella-nail-studio.vercel.app/">
+<img src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://stella-nail-studio.vercel.app/" alt="Stella Nail Studio Website Preview" width="100%" />
+</a>
+</p>
+
+<p align="center">
+<i>Explore the live website to experience the complete design and services.</i>
+</p>
+
+📍 Contact & Location
+
+Stella Nail Studio
+
+📌 Shop 3, Vardhman Heights,
+New 150 Feet Road,
+Opp. SRP Camp Bapa Sitaram Chowk,
+Rajkot, Gujarat – 360005, India
+
+📞 Phone: +91 88491 51381
+
+🌐 Website: stella-nail-studio.vercel.app
+
+🕒 Business Hours: Open daily — closes at 7:30 PM
+
+🚀 Getting Started
+
+Want to run the project locally? Follow these steps.
+
+1. Clone the repository
+bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+
+2. Navigate to the project directory
+bash
+cd YOUR_PROJECT_FOLDER
+
+3. Install dependencies
+
+Use the command appropriate for your project:
+
+bash
+npm install
+
+4. Start the development server
+bash
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Note: These commands assume an npm-based frontend project. Check your package.json for the correct scripts and dependencies.
+🌸 Project Goals
+Create a premium online presence for a nail art studio.
+Showcase nail services and creative designs.
+Make appointment requests easier for customers.
+Provide clear contact and location information.
+Deliver a beautiful and user-friendly browsing experience.
+🤝 Contributing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Suggestions and improvements are welcome!
 
-**Use GitHub Codespaces**
+Fork this repository.
+Create a feature branch.
+Make your changes.
+Submit a pull request.
+📄 License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Add the appropriate license for your project before distributing or reusing its source code.
 
-## What technologies are used for this project?
+<p align="center">
+💖 <b>Stella Nail Studio</b>
+</p>
 
-This project is built with:
+<p align="center">
+<i>Beautiful Nails. Beautiful You. ✨</i>
+</p>
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+<p align="center">
+🌸 Made with love for the beauty of nail art 🌸
+</p>
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+<p align="center">
+<a href="https://stella-nail-studio.vercel.app/">
+Visit Website ↗
+</a>
+</p>
